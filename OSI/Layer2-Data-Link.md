@@ -156,7 +156,7 @@ My personal checklist:
 
 2. **Verify MAC address table**  
 
--show mac address-table
+- Show mac address-table
 - Is the destination MAC learned on the expected port?
 
 3. **Look for loops**  
