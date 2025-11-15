@@ -161,3 +161,83 @@ Most “I can only ping local devices” issues come from this.
 Where ping fails tells me which hop is broken.
 
 ### **4. Check Routing Table**
+show ip route
+
+### **5. Use Traceroute**
+Find the hop where packet disappears.
+
+### **6. Check ACLs / firewalls**
+Routing might be correct, but traffic blocked.
+
+---
+
+## 🎯 Network+ Exam Tips
+
+- Know the difference between **routing vs switching**  
+- Understand how default gateways work  
+- Recognize common routing problems  
+- Understand static vs dynamic routing  
+- ICMP roles (ping, unreachable, TTL exceeded)  
+- Path selection concepts like metrics and AD  
+- CIDR + subnetting (heavily tested)  
+
+The exam loves questions like:
+> “Host A can reach Host B’s network but Host B cannot reach Host A.”
+
+(Solution: missing return route)
+
+---
+
+## 👨‍🏫 Realistic Scenario (Memory Anchor)
+
+**Scenario:**  
+A user can access local servers but not anything on the internet.
+
+My thought process:
+1. They can reach LAN resources → Layer 2 OK  
+2. They can’t go outside → Layer 3 problem  
+3. Check their gateway → wrong  
+4. Fix gateway → internet restored  
+
+Simple but extremely common.
+
+---
+
+## 📝 How I Study This Layer
+
+My approach:
+- Draw small topologies and practice routing flow  
+- Manually calculate subnets  
+- Practice traceroute analysis  
+- Build static and OSPF labs in Packet Tracer  
+- Break routes on purpose to see real errors  
+
+The more routing failures I see, the easier this layer becomes.
+
+---
+
+## 🧩 Quick Review Questions
+
+**1. What device operates at Layer 3?**  
+→ Router.
+
+**2. What does a router do if no route matches a packet?**  
+→ Drops packet (or uses default route).
+
+**3. What protocol reports “Destination Unreachable”?**  
+→ ICMP.
+
+**4. Difference between static and dynamic routing?**  
+→ Static is manual, dynamic is learned automatically.
+
+**5. What does TTL prevent?**  
+→ Routing loops.
+
+---
+
+## ✅ Summary
+
+Layer 3 connects different networks, assigns IP addressing, and handles packet routing.  
+Without this layer, communication would be limited to a single LAN.  
+A strong understanding of Layer 3 is essential for troubleshooting, exams, and real-world networking.
+
